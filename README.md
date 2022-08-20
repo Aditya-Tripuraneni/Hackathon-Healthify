@@ -9,9 +9,9 @@
 ## ⚙️ How we built it
 
 - Frontend: HTML, CSS, Js
-- Backend:
+- Backend: Python
 - Database:
-- Communication API: Twilio
+- Communication API: Twilio, YELP 
 
 ## ⭕ MLH: Most Creative Use of Twilio
 

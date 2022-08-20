@@ -1,7 +1,8 @@
 import requests
-import json
+import os
 
-TOKEN = "-81om9gkihQsSt-ZfTmW8cc8GCXOMwuM1EDUZY9Tt86SqkPR0QUXC1nx9OzI9COPO8dg0OIzBvN4z8aro_dpD-XWAGa-debXIMOM-dZPYFZpwvWLrq3sKhx4czJ4YnYx"
+TOKEN = os.environ.get("YELP_TOKEN")
+
 endpoint = "https://api.yelp.com/v3/businesses/search"
 header = {"Authorization": "Bearer " + TOKEN}
 
@@ -24,6 +25,4 @@ def get_data(type, location):
     return string
 
 
-
-# print(get_data("gym", "toronto"))
 

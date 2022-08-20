@@ -1,5 +1,5 @@
 .home-header{
-    background: #2196f3;
+    background: #35B5AC;
     color: #fff;
     background-image: url(background.png);
     background-size: contain;
@@ -33,7 +33,7 @@
     border-radius: 3px;
 }
 .title-box{
-    background-color: #1065b6;
+    background-color: #35B5AC;
     height: 150px;
     padding-top: 30px;
     border-bottom-left-radius: 200px 50px;
@@ -63,7 +63,7 @@ form label{
     height: 60px;
     color: #fff;
     font-weight: 600;
-    background-color: #1065b6;
+    background-color: #35B5AC;
     border: none;
     border-radius: 3px;
     margin-top: 20px;
