@@ -1,4 +1,5 @@
 import sys
+import os
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
@@ -20,21 +21,22 @@ def go_home_page():
 class StartPage(QDialog):
     def __init__(self):
         super(StartPage, self).__init__()
-        loadUi(r"C:\Users\Desktop\Desktop\Backend\UI\startPageUI.ui", self)
+        user_filepath = os.path.join(os.path.join(os.getcwd(), "UI'S"), "startPageUI.ui")
+        loadUi(user_filepath, self)
         self.storeButton.clicked.connect(lambda: go_stores_page())
 
 
 class StoresPage(QDialog):
     def __init__(self):
         super(StoresPage, self).__init__()
-        loadUi(r"C:\Users\Desktop\Desktop\Backend\UI\storesUI.ui", self)
+        user_filepath = os.path.join(os.path.join(os.getcwd(), "UI'S"), "storesUI.ui")
+        loadUi(user_filepath, self)
         self.backButton.clicked.connect(lambda: go_home_page())
         self.gymButton.clicked.connect(self.get_nearest_gyms)
         self.pharmacyButton.clicked.connect(self.get_nearest_pharmacies)
 
     def get_nearest_gyms(self):
         data = storeFinder.get_data("gym", self.locationEntry.text())
-
         self.data.setText(data)
 
     def get_nearest_pharmacies(self):
