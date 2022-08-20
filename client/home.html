@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | APP NAME</title>
+    <link rel="stylesheet" href="./styles/home.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/8744931b12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
+
 <body>
-    
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">APP NAME</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="./tracker.html">
+                    <i class='bx bx-health'></i>
+                    <span class="links_name">Health Tracker</span>
+                </a>
+                <span class="tooltip">Health Tracker</span>
+            </li>
+            <li>
+                <a href="./workout.html">
+                    <i class='bx bx-dumbbell'></i>
+                    <span class="links_name">Workout</span>
+                </a>
+                <span class="tooltip">Workout</span>
+            </li>
+
+
+            <li class="profile">
+                <a href="/signout">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+
+        <div class="home-container">
+            <div class='home-container-1'>
+                <h1>Who we are</h1>
+                <p>At APP NAME is your daily health app where you can track your daily calorie intake, workouts you have
+                    done the whole day. You can also keep track of your weight. You can see all the data in the form of
+                    graphs for better understanding. You can also search for nearby Gyms, Superstore, Restaurents etc.
+                </p>
+            </div>
+            <div class="home-container-2">
+                <img src="./assets/hero.svg" alt="img" width="350" height="350" />
+            </div>
+        </div>
+
+        <div class="home-container">
+            <div class="home-container-2">
+                <img src="./assets/feat.svg" alt="img" width="300" height="300" />
+            </div>
+            <div class='home-container-1'>
+                <h1 class="heading">What else do we have</h1>
+                <p>APP NAME is a web app where you can:</p>
+                <ul class="list">
+                    <li>Keep records of your daily workout.</li>
+                    <li>Get notification right on you smart phones.</li>
+                    <li>Get tips about health and weight loss or gain.</li>
+                    <li>Get location of your nearby Gyms, Superstore etc.</li>
+                    <li>Keep track of your daily calories intake and weight.</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.min.js"></script>
+
+    <script src="./scripts/home.js"></script>
 </body>
+
 </html>
