@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endurance Exercise | APP NAME</title>
+    <link rel="stylesheet" href="./styles/endurance.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/8744931b12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">APP NAME</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="./tracker.html">
+                    <i class='bx bx-health'></i>
+                    <span class="links_name">Health Tracker</span>
+                </a>
+                <span class="tooltip">Health Tracker</span>
+            </li>
+            <li>
+                <a href="./workout.html">
+                    <i class='bx bx-dumbbell'></i>
+                    <span class="links_name">Workout</span>
+                </a>
+                <span class="tooltip">Workout</span>
+            </li>
+            <li>
+                <a href="./near.html">
+                    <i class='bx bx-buildings'></i>
+                    <span class="links_name">Nearby Gyms</span>
+                </a>
+                <span class="tooltip">Nearby Gyms</span>
+            </li>
+
+
+            <li class="profile">
+                <a href="/signout">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="heading">Endurance Exercise</div>
+
+        <div class="card">
+
+            <div class="products">
+                <div class="thumbnail"><img src="./assets/plank.webp" width="500" height="250" /></div>
+                <h1 class="title">Endurance Exercise</h1>
+                <ol class="description">
+                    <li>Begin kneeling on all fours, and then place your forearms down on the ground. Step one leg back
+                        at a time until you're in a straight line from head to heel, keeping the spine neutral.</li>
+                    <li>Engage your abs to support the lower back, and imagine lifting your chest away from your elbows
+                        but without a rounded spine.</li>
+                    <li>Hold for as long as you can (aim for intervals of 30 to 45 seconds) and then relax. That
+                        completes one rep.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="products">
+                <div class="thumbnail"><img src="data:image/png;base64,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" width="320" height="250" /></div>
+                <h1 class="title">Body weight squats</h1>
+                <ol class="description">
+                    <li>Start by standing upright with your feet placed apart in a position slightly wider than shoulder-width, with your toes pointed straight ahead.</li>
+                    <li>Place your hands on the ground, and then bend your knees and lower your body until your thighs are parallel to the ground.</li>
+                    <li>Push yourself upright, squeezing through your glutes on the way up.
+                    </li>
+                    <li>Perform 2-4 sets of 25 reps. Adjust this rep number if you feel you can do more at the end of each set.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="products">
+                <div class="thumbnail"><img src="data:image/jpeg;base64,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" width="500" height="250" /></div>
+                <h1 class="title">Walking lunges
+                </h1>
+                <ol class="description">
+                    <li>Stand upright with your feet shoulder-width apart.</li>
+                    <li>With your right leg, take a large step forward, then lower your body down so that your back knee either touches or comes close to touching the ground.</li>
+                    <li>Push down through your front foot and stand back up.
+                    </li>
+                    <li>Repeat the same motion with your left leg.
+                    </li>
+                    <li>Perform 2-4 sets of 30 lunges (15 on each leg, per set).
+                    </li>
+                </ol>
+            </div>
+
+            <div class="products">
+                <div class="thumbnail"><img src="http://www.stack.com/wp-content/uploads/Quickly-Strengthen-Your-Upper-Body-With-Pyramid-Push-Ups.jpg" width="350" height="250" /></div>
+                <h1 class="title">Pushups</h1>
+                <ol class="description">
+                    <li>Begin in a full plank position with your hands slightly outside shoulder width and directly under your shoulders. Hold your body up with your toes and with your hands (not your forearms, as with the plank described above). Keep your spine in neutral, and try not to let your hips sag.
+                    </li>
+                    <li>Lower yourself down by bending your elbows at a 45 degree angle, aiming your chest to the ground.
+                    </li>
+                    <li>Promptly push down on your palms, and raise your body back to a plank position.
+                    </li>
+                    <li>Perform 5 sets of 15 reps (adjust as needed).
+                    </li>
+                </ol>
+            </div>
+
+            <div class="products">
+                <div class="thumbnail"><img src="https://gethealthyu.com/wp-content/uploads/2014/07/Basic-Crunch_Exercise.jpg" width="350" height="250" /></div>
+                <h1 class="title">Crunches</h1>
+                <ol class="description">
+                    <li>Start by lying flat on your back, with your legs bent and your feet flat on the ground. Place your hands lightly behind your head to support your neck, with your elbows out to the sides.
+                    </li>
+                    <li>Engage your abs and curl your torso up, lifting your upper back and shoulders off the ground. Keep your elbows out to the sides rather than curling them around your head. Resist the urge to use momentum, rather than your muscles, to bring your body up. Keep a golf-ball-sized space between your chin and chest.
+                    </li>
+                    <li>Guide your body down in a controlled motion to maximize your muscle use.</li>
+                    <li>Perform 5 sets of 25 reps.
+                    </li>
+                </ol>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.min.js"></script>
+
+    <script src="./scripts/home.js"></script>
+</body>
+
+</html>
