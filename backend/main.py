@@ -96,6 +96,7 @@ class HealthPage(QDialog):
 
 
     def display_weight(self):
+        pass
 
 
 
