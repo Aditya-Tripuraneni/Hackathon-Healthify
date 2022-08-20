@@ -69,9 +69,9 @@ QPushButton:hover{
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>260</x>
       <y>220</y>
-      <width>241</width>
+      <width>101</width>
       <height>41</height>
      </rect>
     </property>
@@ -84,7 +84,7 @@ QPushButton:hover{
      </font>
     </property>
     <property name="text">
-     <string>Find Pharmacies</string>
+     <string>Stores</string>
     </property>
    </widget>
   </widget>
