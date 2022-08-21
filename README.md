@@ -18,7 +18,7 @@ Healthify is a web app where you can:
 
 ## ⚙️ How we built it
 
-- Frontend: HTML, CSS, Js
+- Frontend: HTML, CSS, JS, Bootstrap
 - Backend: Python
 - Database: Firestore, SQlit3
 - Communication API: Twilio, YELP
@@ -29,10 +29,9 @@ Twilio provides a ton of other awesome communication features using web service 
 
 ## 🧠 Challenges we ran into
 
-- Due to the difference in the timezone, it was bit hard to calobrate with other team members.
+- Due to the difference in the timezone, it was harder to collaborate with other team members.
 - We faced some difficutly while working with Twilio for sending SMS.
 - Building the backend was a bit tricky.
--With the short time to create this application we were not able to implement the calorie feature or add other stores to track.
 
 ## 🏅 Accomplishments that we're proud of
 
