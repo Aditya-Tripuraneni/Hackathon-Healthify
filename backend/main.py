@@ -9,7 +9,7 @@ import scheduled_SMS
 from datetime import date, datetime
 
 
-USER_PATH = os.path.join(os.getcwd(), "backend/UI'S")
+USER_PATH = os.path.join(os.getcwd(), "UI'S")
 
 
 #CONVERSIONS
@@ -62,12 +62,14 @@ class StoresPage(QDialog):
         self.pharmacyButton.clicked.connect(self.get_nearest_pharmacies)
 
     def get_nearest_gyms(self):
-        data = storeFinder.get_data("gym", self.locationEntry.text())
-        self.data.setText(data)
+        if self.locationEntry.text() != "":
+            data = storeFinder.get_data("gym", self.locationEntry.text())
+            self.data.setText(data)
 
     def get_nearest_pharmacies(self):
-        data = storeFinder.get_data("pharmacies", self.locationEntry.text())
-        self.data.setText(data)
+        if self.locationEntry.text() != "":
+            data = storeFinder.get_data("pharmacies", self.locationEntry.text())
+            self.data.setText(data)
 
 
 class HealthPage(QDialog):
