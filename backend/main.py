@@ -5,7 +5,8 @@ from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 import storeFinder
 import database
-from datetime import date
+import scheduled_SMS
+from datetime import date, datetime
 
 
 USER_PATH = os.path.join(os.getcwd(), "backend/UI'S")
@@ -77,6 +78,7 @@ class HealthPage(QDialog):
         self.weightStats.clicked.connect(self.display_weight)
         self.bmiButton.clicked.connect(self.calculate_BMI)
         self.homeButtonHealth.clicked.connect(lambda: go_home_page())
+        self.remindMeButton.clicked.connect(self.send_reminder)
         self.feet.setMinimum(1)
         self.feet.setMaximum(12)
         self.inches.setMinimum(0)
@@ -97,7 +99,7 @@ class HealthPage(QDialog):
 
     def get_date(self):
         dates = self.dateEntry.text().split("-")
-        date_object = date(int(dates[0]), int(dates[1]), int (dates[2]))
+        date_object = datetime(int(dates[0]), int(dates[1]), int (dates[2]),1,1,1)
         return date_object
 
     def get_reminder_type(self):
@@ -107,7 +109,8 @@ class HealthPage(QDialog):
     def display_weight(self):
         database.graph_weight()
 
-
+    def send_reminder(self):
+        scheduled_SMS.send_sms(self.get_phone_number(), self.get_date(), self.get_reminder_type())    
 
 
 
