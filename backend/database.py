@@ -36,9 +36,7 @@ def graph_weight():
     plt.ylabel("Weight (Kg)")
     plt.show()
 
-string_date = "2022-09-10"
-dates = string_date.split("-")
-c = date(int(dates[0]), int(dates[1]), int(dates[2]))
+
 
 
 
