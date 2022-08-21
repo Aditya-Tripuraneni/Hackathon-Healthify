@@ -4,7 +4,7 @@
 
 ## 💡 Inspiration
 
-Its hard to keep track of your fitness goals and how you are doing. We are really busy and don't have time to write down all of your workouts. We are also not able to keep track of your progress or the calories you have consumed. Not taking proper care of your body is a big problem. We are here to help you keep track of your fitness goals and how you are doing. Healthify is your daily health app where you can track your daily workouts, and weight, which are shown in the form of graphs for better understanding. In addition to these features, you can also search for nearby gyms & pharmacies and anything else that will help you achieve your fitness goals.
+It's hard to keep track of your fitness goals and how you are doing. Nowadays, people are very busy and don't have time to track minor things.  Not taking proper care of your body is a big problem. We are here to help you keep track of your fitness goals and how you are doing. Healthify is your daily health app where you can track your daily workouts and weight. This data is shown visually through a graph. In addition to these features, you can also search for nearby gyms & pharmacies and anything else that will help you achieve your fitness goals.
 
 ## 💻 What it does
 
@@ -47,9 +47,9 @@ Twilio provides a ton of other awesome communication features using web service 
 - We learned how to use the Twilio API for sending SMS.
 - We learned how to use the Firebase API for storing data.
 - We learned how to use YELP API for searching for nearby places.
-- We learned how to graph data visually through utilziing Sqlit3.
+- We learned how to graph data visually through utilzing Sqlit3.
 
-## 🚀 What's next for APP NAME
+## 🚀 What's next for Healthify NAME
 
 - Building a mobile app.
 - Adding a calorie tracker.
