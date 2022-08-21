@@ -75,7 +75,6 @@ class HealthPage(QDialog):
         self.weightStats.clicked.connect(self.display_weight)
         self.bmiButton.clicked.connect(self.calculate_BMI)
         self.homeButtonHealth.clicked.connect(lambda: go_home_page())
-        self.remindMeButton.clicked.connect(self.useless)
         self.feet.setMinimum(1)
         self.feet.setMaximum(12)
         self.inches.setMinimum(0)
