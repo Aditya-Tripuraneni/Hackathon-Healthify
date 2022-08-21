@@ -7,7 +7,9 @@ import storeFinder
 import database
 from datetime import date
 
+
 USER_PATH = os.path.join(os.getcwd(), "backend/UI'S")
+
 
 #CONVERSIONS
 INCHES_TO_CENTIMETER = 2.54
