@@ -101,7 +101,7 @@ class HealthPage(QDialog):
 
     def get_date(self):
         dates = self.dateEntry.text().split("-")
-        date_object = datetime(int(dates[0]), int(dates[1]), int (dates[2]),1,1,1)
+        date_object = datetime(int(dates[0]), int(dates[1]), int (dates[2]),3,0,0)
         return date_object
 
     def get_reminder_type(self):

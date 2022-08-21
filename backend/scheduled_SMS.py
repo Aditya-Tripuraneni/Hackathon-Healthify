@@ -11,7 +11,7 @@ def send_sms(number, appointmentDate, reminder_type):
 
     # schedule message to be sent 61 minutes after current time
     send_when =  ((appointmentDate + timedelta(hours=4))) + timedelta(minutes=16)
-    print(send_when)
+    # print(send_when)
     # send_when = datetime.utcnow() + timedelta(minutes=16)
 
     # send the SMS
