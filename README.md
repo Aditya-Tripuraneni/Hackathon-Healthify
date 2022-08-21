@@ -49,7 +49,7 @@ Twilio provides a ton of other awesome communication features using web service 
 - We learned how to use YELP API for searching for nearby places.
 - We learned how to graph data visually through utilzing Sqlit3.
 
-## 🚀 What's next for Healthify NAME
+## 🚀 What's next for Healthify 
 
 - Building a mobile app.
 - Adding a calorie tracker.
