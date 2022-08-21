@@ -20,7 +20,7 @@ Healthify is a web app where you can:
 
 - Frontend: HTML, CSS, JS, Bootstrap
 - Backend: Python
-- Database: Firestore, SQlit3
+- Database: Firebase, SQlite3
 - Communication API: Twilio, YELP
 
 ## ⭕ MLH: Most Creative Use of Twilio
