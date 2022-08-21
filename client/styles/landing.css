@@ -1,72 +1,139 @@
-.home-header{
-    background: #35B5AC;
-    color: #fff;
-    background-image: url(background.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center 110%;
+html, body {
+        background-image: url(background.png);
+        background-size: contain;
+        background-repeat: repeat;
+        background-position: center 100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
-.logo{
-    width: 15%;
-    margin: 10px 8%;
-}
-.home-header .row{
-    padding-top: 80px;
-    padding-bottom: 169px;
-}
-.promo-text-box{
-    margin-top: 15%;
-}
-.promo-text-box h1{
-    margin-bottom: 25px;
-}
-.play-btn{
-    font-size: 20px;
-    margin: 20px;
-    color: white;
-    letter-spacing: 5px;
-}
-.lead-form{
-    width: 350px;
-    background: #fff;
-    margin: 10px auto;
-    border-radius: 3px;
-}
-.title-box{
-    background-color: #35B5AC;
-    height: 150px;
-    padding-top: 30px;
-    border-bottom-left-radius: 200px 50px;
-    border-bottom-right-radius: 200px 50px;
-}
-form label{
-    float: left;
-    margin-left: 37px;
-    color: #999;
-    margin-top: 15px;
-    margin-bottom: 3px;
-    font-size: 14px;
-}
-.input-box{
-    width: 280px;
-    height: 40px;
-    padding: 0px 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    color: #999;
-}
-.input-box::placeholder{
-    color: #999;
-}
-.submit-btn{
-    width: 280px;
-    height: 60px;
-    color: #fff;
-    font-weight: 600;
-    background-color: #35B5AC;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     border: none;
-    border-radius: 3px;
-    margin-top: 20px;
+    outline: none;
+}
+#content_container {
+    width: 30%;
+    height: 70%;
+}
+
+#form_container {
+    width: 100%;
+    height: 100%;
+
+    background-color: #00898a;
+    box-shadow: 0 0 50px -20px #000;
+    border-radius: 2%;
+
+    overflow: hidden;
+}
+
+#form_header_container {
+    width: 100%;
+    height: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    border-bottom: 1px solid transparent;
+    border-image: -webkit-linear-gradient(25deg, #089f8f, #00898a, #08737f, #215d6e, #2a4858) 20;
+    background: #CBFFFA
+    ;
+}
+
+#form_header {
+    display: inline-block;
+    font-size: 15px;
+    font-family: Bowlby One SC;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+
+    background: -webkit-linear-gradient(25deg, #089f8f, #00898a, #08737f, #215d6e, #2a4858);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+#form_content_container {
+    width: 100%;
+    height: 90%;
+
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 30px;
+}
+
+#form_content_inner_container {
+    width: 75%;
+    height: 100%;
+
+    float: left;
+
+}
+
+input {
+    width: 100%;
+    height: 40px;
+
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    background: #CBFFFA;
+    font-family: Montserrat;
+    font-weight: 500;
+    color: #000000;
+    font-size: 12px;
+
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border-image: -webkit-linear-gradient(25deg, #089f8f, #00898a, #08737f, #215d6e, #2a4858) 1;
+}
+
+#button_container {
+    width: 100%;
+    height: 10%;
+
+    background-image: linear-gradient(80deg,  #089f8f, #00898a, #08737f, #215d6e, #2a4858);
+    color: #fff;
+
+    float: left;
+
+    margin-top: 5px;
+}
+
+#button_container button {
+    width: 50%;
+    height: 100%;
+    float: left;
+
+    background: transparent;
+    color: inherit;
+
+    font-family: Montserrat;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 12px;
+
     cursor: pointer;
-    margin-bottom: -30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
