@@ -5,8 +5,8 @@ from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 import storeFinder
 
-USER_PATH = os.path.join(os.getcwd(), "UI'S")
-
+USER_PATH = os.path.join(os.getcwd(), "backend/UI'S")
+print(os.getcwd())
 #CONVERSIONS
 INCHES_TO_CENTIMETER = 2.54
 CENTIMETERES_TO_METER = 100

@@ -21,4 +21,4 @@ message = client.messages.create(
     send_at=send_when.isoformat() + 'Z',
 )
 
-print(message.sid)
+# print(message.sid)
