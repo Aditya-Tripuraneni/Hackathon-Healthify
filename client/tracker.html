@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker | Healthify</title>
+    <link rel="stylesheet" href="./styles/tracker.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/8744931b12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link id="pagestyle" href="./styles/material-dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">Healthify</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li style="margin-left: -30px;">
+                <a href="./home.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li style="margin-left: -30px;">
+                <a href="./tracker.html">
+                    <i class='bx bx-health'></i>
+                    <span class="links_name">Health Tracker</span>
+                </a>
+                <span class="tooltip">Health Tracker</span>
+            </li>
+            <li style="margin-left: -30px;">
+                <a href="./workout.html">
+                    <i class='bx bx-dumbbell'></i>
+                    <span class="links_name">Workout</span>
+                </a>
+                <span class="tooltip">Workout</span>
+            </li>
+            <li style="margin-left: -30px;">
+                <a href="./near.html">
+                    <i class='bx bx-buildings'></i>
+                    <span class="links_name">Nearby Gyms</span>
+                </a>
+                <span class="tooltip">Nearby Gyms</span>
+            </li>
+
+
+            <li class="profile">
+                <a href="/signout">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="heading">Health Tracker</div>
+
+        <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+            <!-- Navbar -->
+
+            <!-- End Navbar -->
+            <div class="container-fluid py-4">
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <div class="card">
+                            <div class="card-header p-3 pt-2">
+                                <div
+                                    class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                                    <i class='bx bx-walk'></i>
+                                </div>
+                                <div class="text-end pt-1">
+                                    <p class="text-sm mb-0 text-capitalize">Steps</p>
+                                    <h4 class="mb-0">7,400</h4>
+                                </div>
+                            </div>
+                            <hr class="dark horizontal my-0">
+                            <div class="card-footer p-3">
+                                <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-43.5%</span> than
+                                    yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-header p-3 pt-2">
+                                <div
+                                    class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
+                                    <i class='bx bx-coffee' ></i>
+                                </div>
+                                <div class="text-end pt-1">
+                                    <p class="text-sm mb-0 text-capitalize">Body weight</p>
+                                    <h4 class="mb-0">55 kg.</h4>
+                                </div>
+                            </div>
+                            <hr class="dark horizontal my-0">
+                            <div class="card-footer p-3">
+                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+10% </span>than
+                                    last month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-4 col-md-6 mt-4 mb-4">
+                        <div class="card z-index-2 ">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                    <div class="chart">
+                                        <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-0 ">Steps walked</h6>
+                                <p class="text-sm ">2500 Steps walked yesterday</p>
+                                <hr class="dark horizontal">
+                                <div class="d-flex ">
+                                    <i class="material-icons text-sm my-auto me-1">schedule</i>
+                                    <p class="mb-0 text-sm"> updated 12 Mins ago </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-4 mb-4">
+                        <div class="card z-index-2  ">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                                <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
+                                    <div class="chart">
+                                        <canvas id="chart-line" class="chart-canvas" height="170"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-0 "> Body weight </h6>
+                                <p class="text-sm "> <span class="font-weight-bolder">15 kg.</span> decrease in this
+                                    month. </p>
+                                <hr class="dark horizontal">
+                                <div class="d-flex ">
+                                    <i class="material-icons text-sm my-auto me-1">schedule</i>
+                                    <p class="mb-0 text-sm"> updated 10 Mins ago </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-4 mb-4">
+                        <div class="card z-index-2 ">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                    <div class="chart" style="color: white; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                                       This month's input
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-0 ">This month's</h6>
+                                <p class="text-sm "><input type="text" placeholder="weight in Kg"></p>
+                                <hr class="dark horizontal">
+                            <h4 style="margin-bottom: 35px; text-align: center;">This month's is already submitted</h4>
+                                <div class="d-flex ">
+                                    <button type="button" class="btn btn-primary" style="background-color:blue">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.min.js"></script>
+    <script src="./scripts/chartjs.min.js"></script>
+
+    <script src="./scripts/home.js"></script>
+
+    <script>
+        var ctx = document.getElementById("chart-bars").getContext("2d");
+
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["M", "T", "W", "T", "F", "S", "S"],
+                datasets: [{
+                    label: "Sales",
+                    tension: 0.4,
+                    borderWidth: 0,
+                    borderRadius: 4,
+                    borderSkipped: false,
+                    backgroundColor: "rgba(255, 255, 255, .8)",
+                    data: [11000, 12000, 13000, 14000, 15000, 16000, 17000],
+                    maxBarThickness: 6
+                },],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 500,
+                            beginAtZero: true,
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                            color: "#fff"
+                        },
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+
+
+        var ctx2 = document.getElementById("chart-line").getContext("2d");
+
+        new Chart(ctx2, {
+            type: "line",
+            data: {
+                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Body weight",
+                    tension: 0,
+                    borderWidth: 0,
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                    pointBorderColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderWidth: 4,
+                    backgroundColor: "transparent",
+                    fill: true,
+                    data: [80, 70, 76, 65, 60, 88, 84, 85, 95],
+                    maxBarThickness: 6
+
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+
+        var ctx3 = document.getElementById("chart-line-tasks").getContext("2d");
+
+        new Chart(ctx3, {
+            type: "line",
+            data: {
+                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: "Body weight",
+                    tension: 0,
+                    borderWidth: 0,
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                    pointBorderColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderWidth: 4,
+                    backgroundColor: "transparent",
+                    fill: true,
+                    data: [80, 70, 76, 65, 60, 88, 84, 85, 70],
+                    maxBarThickness: 6
+
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            padding: 10,
+                            color: '#f8f9fa',
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

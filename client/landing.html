@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
         <!-- Our stylesheet -->
-        <link rel="stylesheet" type="text/css" href="landing.css">
+        <link rel="stylesheet" type="text/css" href="./styles/landing.css">
     </head>
     <body>
         <div id="content_container">
@@ -25,7 +25,8 @@
                         <input type="password" id="password" placeholder="New Password">
 
                         <div id="button_container">
-                            <button onclick="login()">Login</button>
+                            <a href="./home.html">
+                            <button onclick="login()">Login</button></a>
                             <button onclick="register()">Register</button>
                         </div>
 
@@ -43,6 +44,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
     <!-- Our script must be loaded after firebase references -->
-    <script src="landing.js"></script>
+    <script src="./scripts/landing.js"></script>
 
 </html>
