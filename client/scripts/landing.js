@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -77,12 +71,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase
         
         database_ref.child('users/' + user.uid).update(user_data)
         
-        alert('User Logged In!!')
-
-
-
-
-
+        alert('User Logged In!')
 
       })
       .catch(function(error) {
@@ -92,14 +81,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase
         
       })
   }
-
-
-
-
-
-
-
-    
+   
   function validate_email(email) {
     expression = /^[^@]+@\w+(\.\w+)+\w$/
   if (expression.test(email) == true) {
@@ -129,7 +111,3 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase
       return true
   }
 }
-
-
-
-
