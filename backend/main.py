@@ -4,6 +4,8 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 import storeFinder
+import database
+from datetime import date
 
 USER_PATH = os.path.join(os.getcwd(), "UI'S")
 
@@ -19,8 +21,6 @@ def verify_input(user_input):
         return True
     except ValueError:
         return False
-
-
 
 def go_stores_page():
     store_page = StoresPage()
@@ -75,6 +75,7 @@ class HealthPage(QDialog):
         self.weightStats.clicked.connect(self.display_weight)
         self.bmiButton.clicked.connect(self.calculate_BMI)
         self.homeButtonHealth.clicked.connect(lambda: go_home_page())
+        self.remindMeButton.clicked.connect(self.useless)
         self.feet.setMinimum(1)
         self.feet.setMaximum(12)
         self.inches.setMinimum(0)
@@ -93,9 +94,19 @@ class HealthPage(QDialog):
     def get_phone_number(self):
         return self.phoneNumberEntry.text()
 
+    def get_date(self):
+        dates = self.dateEntry.text().split("-")
+        date_object = date(int(dates[0]), int(dates[1]), int (dates[2]))
+        return date_object
+
+    def get_reminder_type(self):
+        return self.reminderBox.currentText()
 
 
     def display_weight(self):
+        database.graph_weight()
+
+
 
 
 

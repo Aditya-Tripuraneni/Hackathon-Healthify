@@ -68,6 +68,8 @@ background-color: rgb(250, 88, 182);
     <font>
      <family>Yu Gothic UI Semibold</family>
      <pointsize>32</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -112,7 +114,10 @@ background-color: rgb(250, 88, 182);
    </property>
    <property name="font">
     <font>
+     <family>MS Shell Dlg 2</family>
      <pointsize>38</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -244,7 +249,7 @@ background-color: rgb(250, 88, 182);
      <string>Need a reminder?</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="reminderBox">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -297,13 +302,13 @@ QComboBox:hover{
      </property>
     </item>
    </widget>
-   <widget class="QPushButton" name="bmiButton_2">
+   <widget class="QPushButton" name="remindMeButton">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>450</y>
+      <y>660</y>
       <width>271</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -368,6 +373,48 @@ border: 2px solid rgb(250, 88, 182);
     </property>
     <property name="text">
      <string>Enter Phone Number</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dateEntry">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>480</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+background-color: rgb(122, 11, 192);
+border: 2px solid rgb(255, 255, 255)
+}
+QLineEdit:focus{
+border: 2px solid rgb(250, 88, 182);
+
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>400</y>
+      <width>411</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;</string>
+    </property>
+    <property name="text">
+     <string>Enter Date (Year-Month-Day)</string>
     </property>
    </widget>
   </widget>
@@ -474,6 +521,8 @@ QSpinBox:down-button  {
     <font>
      <family>Yu Gothic UI Semibold</family>
      <pointsize>32</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -494,7 +543,10 @@ QSpinBox:down-button  {
    </property>
    <property name="font">
     <font>
+     <family>MS Shell Dlg 2</family>
      <pointsize>38</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -515,7 +567,10 @@ QSpinBox:down-button  {
    </property>
    <property name="font">
     <font>
+     <family>MS Shell Dlg 2</family>
      <pointsize>25</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
