@@ -39,7 +39,7 @@ Twilio provides a ton of other awesome communication features using web service 
 - Building a web application along with the GUI.
 - Learning these frameworks within the short timeframe given.
 - Staying motivated while working in different time zones. 
-- Getting teh SMS notifications to work with Twilio. 
+- Getting the SMS notifications to work with Twilio. 
 
 ## 📖 What we learned
 
