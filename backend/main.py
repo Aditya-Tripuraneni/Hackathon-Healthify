@@ -8,22 +8,21 @@ import database
 import scheduled_SMS
 from datetime import date, datetime
 
-
 USER_PATH = os.path.join(os.getcwd(), "UI'S")
 
-
-#CONVERSIONS
+# CONVERSIONS
 INCHES_TO_CENTIMETER = 2.54
 CENTIMETERES_TO_METER = 100
 
 
-#verifies if user has enters proper datatype for fields
+# verifies if user has enters proper datatype for fields
 def verify_input(user_input):
     try:
         float(user_input)
         return True
     except ValueError:
         return False
+
 
 def go_stores_page():
     store_page = StoresPage()
@@ -89,8 +88,11 @@ class HealthPage(QDialog):
 
     def calculate_BMI(self):
         if verify_input(self.weightEntry.text()):
-            total_meters = (((int(self.feet.value()) * 12) + (int(self.inches.value()))) * INCHES_TO_CENTIMETER)/CENTIMETERES_TO_METER
-            bmi = float(self.weightEntry.text())/(total_meters**2)
+
+            database.send_weight_data("weight", int(self.weightEntry.text()))
+            total_meters = (((int(self.feet.value()) * 12) + (
+                int(self.inches.value()))) * INCHES_TO_CENTIMETER) / CENTIMETERES_TO_METER
+            bmi = float(self.weightEntry.text()) / (total_meters ** 2)
             self.bmi.setText((str(bmi))[:5])
             self.warning.setVisible(False)
         else:
@@ -101,19 +103,17 @@ class HealthPage(QDialog):
 
     def get_date(self):
         dates = self.dateEntry.text().split("-")
-        date_object = datetime(int(dates[0]), int(dates[1]), int (dates[2]),3,0,0)
+        date_object = datetime(int(dates[0]), int(dates[1]), int(dates[2]), 3, 0, 0)
         return date_object
 
     def get_reminder_type(self):
         return self.reminderBox.currentText()
 
-
     def display_weight(self):
         database.graph_weight()
 
     def send_reminder(self):
-        scheduled_SMS.send_sms(self.get_phone_number(), self.get_date(), self.get_reminder_type())    
-
+        scheduled_SMS.send_sms(self.get_phone_number(), self.get_date(), self.get_reminder_type())
 
 
 app = QApplication(sys.argv)
