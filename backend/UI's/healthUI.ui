@@ -22,7 +22,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(26, 26, 64);</string>
+   <string notr="true">background-color: rgb(166, 108, 255)</string>
   </property>
   <widget class="QPushButton" name="bmiButton">
    <property name="geometry">
@@ -44,7 +44,7 @@
    <property name="styleSheet">
     <string notr="true">QPushButton{
 border-radius:30px;
-background-color: rgb(122, 11, 192);
+background-color: rgb(156, 158, 254);
 }
 
 QPushButton:hover{
@@ -168,7 +168,7 @@ border: 2px solid rgb(250, 88, 182);
    <property name="styleSheet">
     <string notr="true">QPushButton{
 border-radius:30px;
-background-color: rgb(122, 11, 192);
+background-color: rgb(156, 158, 254);
 }
 
 QPushButton:hover{
@@ -199,7 +199,7 @@ background-color: rgb(250, 88, 182);
    <property name="styleSheet">
     <string notr="true">QPushButton{
 border-radius:30px;
-background-color: rgb(39, 0, 130);
+background-color: rgb(177, 225, 255);
 }
 
 QPushButton:hover{
@@ -220,7 +220,7 @@ background-color: rgb(250, 88, 182);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(39, 0, 130);</string>
+    <string notr="true">background-color: rgb(156, 158, 254)</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -268,7 +268,7 @@ background-color: rgb(250, 88, 182);
     </property>
     <property name="styleSheet">
      <string notr="true">QComboBox{
-background-color: rgb(250, 88, 182); font-size: 14pt; 
+background-color: rgb(166, 108, 255); font-size: 14pt; 
 border-width: 1px;
 border-radius: 20px;
 }
@@ -278,12 +278,13 @@ QListView{
     color:                      rgb(87, 96, 134);
     background-color:   rgb(255, 255, 255);
     font-weight:            bold;
-    selection-background-color: rgb(47, 175, 178);
+    selection-background-color: rgb(250, 88, 182);
+;
 }
 
 
 QComboBox:hover{
-	background-color: rgb(122, 11, 192);
+background-color: rgb(250, 88, 182);
 }</string>
     </property>
     <item>
@@ -322,7 +323,7 @@ QComboBox:hover{
     <property name="styleSheet">
      <string notr="true">QPushButton{
 border-radius:15px;
-background-color: rgb(122, 11, 192);
+background-color: rgb(175, 180, 255);
 }
 
 QPushButton:hover{

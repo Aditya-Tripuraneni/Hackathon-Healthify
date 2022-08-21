@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(243, 184, 255)</string>
+   <string notr="true">background-color: rgb(166, 108, 255)</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -76,11 +76,11 @@ border: 2px solid rgb(255, 0, 127)
    <property name="styleSheet">
     <string notr="true">QPushButton{
 border-radius: 10px;
-background-color: rgb(157, 188, 255);
+background-color: rgb(175, 180, 255);
 }
 
 QPushButton:hover{
-background-color: rgb(47, 193, 255);
+background-color: rgb(177, 225, 255);
 }</string>
    </property>
    <property name="text">
@@ -105,12 +105,11 @@ background-color: rgb(47, 193, 255);
    <property name="styleSheet">
     <string notr="true">QPushButton{
 border-radius: 10px;
-background-color: rgb(157, 188, 255);
+background-color:  rgb(175, 180, 255);
 }
 
 QPushButton:hover{
-background-color: rgb(47, 193, 255);
-}</string>
+background-color: rgb(177, 225, 255);}</string>
    </property>
    <property name="text">
     <string>Find Pharmacies</string>
@@ -134,11 +133,11 @@ background-color: rgb(47, 193, 255);
    <property name="styleSheet">
     <string notr="true">QPushButton{
 border-radius: 10px;
-background-color: rgb(183, 218, 255);
+background-color:rgb(175, 180, 255);
 }
 
 QPushButton:hover{
-background-color: rgb(0, 200, 255);
+background-color: rgb(177, 225, 255);
 }</string>
    </property>
    <property name="text">
